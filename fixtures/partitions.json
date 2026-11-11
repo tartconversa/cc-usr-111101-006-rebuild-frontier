@@ -1,0 +1,11 @@
+{
+  "retention_start": "2026-09-01",
+  "cutoff": "2026-10-10",
+  "changes": [
+    {
+      "node": "ods",
+      "day": "2026-09-30",
+      "revision": "2"
+    }
+  ]
+}

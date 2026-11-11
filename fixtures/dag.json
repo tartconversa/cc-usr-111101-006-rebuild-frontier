@@ -1,0 +1,38 @@
+{
+  "timezone": "Asia/Shanghai",
+  "nodes": {
+    "ods": {
+      "kind": "source"
+    },
+    "daily": {
+      "kind": "action",
+      "version": "1"
+    },
+    "rolling7": {
+      "kind": "action",
+      "version": "1"
+    },
+    "monthly": {
+      "kind": "action",
+      "version": "1"
+    }
+  },
+  "dependencies": [
+    {
+      "from": "ods",
+      "to": "daily",
+      "mapping": "same_day"
+    },
+    {
+      "from": "daily",
+      "to": "rolling7",
+      "mapping": "trailing_days",
+      "days": 7
+    },
+    {
+      "from": "daily",
+      "to": "monthly",
+      "mapping": "same_month"
+    }
+  ]
+}
